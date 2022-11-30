@@ -1,0 +1,202 @@
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #222222 #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #222222;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+  }
+  
+img {
+ width: 100%;
+}
+
+
+
+/*--------------------------------------------
+            DEBUT DE CODE
+---------------------------------------------*/
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Avenir, sans-serif;
+    color: white;
+    box-sizing: border-box;
+    
+}
+
+.bannière{
+    background-color: white;
+    text-align: center;
+}
+
+body{
+    background-color: #222222;
+}
+
+
+/*--------------------------------------------
+                    MENU 
+---------------------------------------------*/
+
+nav{
+
+    width: 100%;
+    margin: 0px auto 40px auto;
+    position: sticky;
+    margin-top: -15px;
+
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+nav li{
+    float: left;
+    width: 25%;/*100% divisé par le nombre d'éléments de menu*/
+    text-align: center;/*Centre le texte dans les éléments de menu*/
+    background-color: #3FA9F5;
+
+}
+
+/*Evite que le menu n'ait une hauteur nulle*/
+nav ul::after{
+    content: "";
+    clear: both;
+}
+
+nav a{
+    display: block; /*Toute la surface sera cliquable*/
+    text-decoration: none;
+    color: black;
+    border-bottom: 2px solid transparent;/*Evite le décalage des éléments sous le menu à cause de la bordure en :hover*/
+    padding: 10px 0px;/*Agrandit le menu et espace la bordure du texte*/
+}
+
+nav a:hover{
+    color: white;
+    border-bottom: 2px solid silver;
+    
+}
+
+/*--------------------------------------------
+                   GRILLE
+---------------------------------------------*/
+
+.outer-grid {
+   display: flex;
+   flex-wrap: wrap;
+   padding: 0 4px;
+
+}
+.inner-grid {
+   flex: 25%;
+   max-width: 33.33%;
+   padding: 0 4px;
+}
+.inner-grid img {
+   margin-top: 8px;
+   width: 100%;
+   padding: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+
+/*--------------------------------------------
+            VERSION MOBILE
+---------------------------------------------*/
+
+
+@media screen and (max-width: 1024px){
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Avenir, sans-serif;
+}
+
+
+body {
+  margin: 0;
+  background: #222222;
+
+}
+
+/*--------------------------------------------
+                MENU MOBILE
+---------------------------------------------*/
+
+nav li{
+    float: none;
+    width: 100%;/*100% divisé par le nombre d'éléments de menu*/
+    text-align: center;/*Centre le texte dans les éléments de menu*/
+    background-color: #f4f4f4;
+}
+
+
+nav{
+    width: 100%;
+    margin: 0px auto 0px auto;
+    background-color: transparent;
+    position: sticky;
+    margin-top: -2%;
+
+}
+
+nav a{
+    display: block; /*Toute la surface sera cliquable*/
+    text-decoration: none;
+    color: black;
+    border-bottom: 0px solid transparent;/*Evite le décalage des éléments sous le menu à cause de la bordure en :hover*/
+    padding: 10px 0px;/*Agrandit le menu et espace la bordure du texte*/
+}
+
+
+nav a:hover{
+    color: white;
+    border-bottom: 2px solid silver;
+    background-color: #222222;
+
+}
+
+
+#menu-dashboard li {
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #bcbcbc; 
+}
+
+/*--------------------------------------------
+            GRILLE VERSION MOBILE
+---------------------------------------------*/
+
+.outer-grid {
+   display: flex;
+   flex-wrap: wrap;
+   padding: 0 0px;
+}
+.inner-grid {
+   flex: 100%;
+   max-width: 100%;
+   padding: 0;
+}
+
+}

@@ -1,0 +1,392 @@
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #222222 #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #222222;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+  }
+  
+img {
+ width: 100%;
+}
+
+
+
+/*--------------------------------------------
+            DEBUT DE CODE
+---------------------------------------------*/
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Avenir, sans-serif;
+    color: white;
+    
+}
+
+.bannière{
+    background-color: white;
+    text-align: center;
+}
+
+body{
+    background-color: #222222;
+    
+}
+
+/*--------------------------------------------
+                   MENU 
+---------------------------------------------*/
+
+nav{
+
+    width: 100%;
+    margin: 0px auto 40px auto;
+    position: sticky;
+    margin-top: -15px;
+
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+nav li{
+    float: left;
+    width: 25%;/*100% divisé par le nombre d'éléments de menu*/
+    text-align: center;/*Centre le texte dans les éléments de menu*/
+    background-color: #3FA9F5;
+
+}
+
+/*Evite que le menu n'ait une hauteur nulle*/
+nav ul::after{
+    content: "";
+    clear: both;
+}
+
+nav a{
+    display: block; /*Toute la surface sera cliquable*/
+    text-decoration: none;
+    color: black;
+    border-bottom: 2px solid transparent;/*Evite le décalage des éléments sous le menu à cause de la bordure en :hover*/
+    padding: 10px 0px;/*Agrandit le menu et espace la bordure du texte*/
+}
+
+nav a:hover{
+    color: white;
+    border-bottom: 2px solid silver;
+    
+}
+
+.conteneur{
+  margin: 0px 20px;
+  height: 1500px;
+  text-align: center;
+  color: white;
+}
+@import url("https://fonts.googleapis.com/css?family=Tangerine");
+@import url(https://fonts.googleapis.com/css?family=Kaushan+Script);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,300,400,700);
+@import url("//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
+
+.toutev{
+
+margin: 130px;
+padding-top: 5px;
+box-shadow: 12px 12px 0px black;
+
+
+}
+
+#vid-list .desc {
+    color: #CACACA;
+    font-size: 13px;
+    margin-top: 0px;
+}
+
+
+body 
+        
+
+      .title {
+        width: 100%;
+        max-width: 854px;
+        margin: 0 auto;
+      }
+
+      .caption {
+        width: 100%;
+        max-width: 854px;
+        margin: 0 auto;
+        padding: 20px 0;
+
+      }
+
+      .vid-main-wrapper {
+        width: 100%;
+        min-width: 440px;
+        background: #fff;
+        margin: 0 auto;
+        box-shadow: 6px 6px 6px black ;
+
+      }
+
+
+      /*  VIDEO PLAYER CONTAINER
+    ############################### */
+      .vid-container {
+        position: relative;
+        padding-bottom: 30%;
+        padding-top: 30px; 
+        height: 0; 
+        width:50%;
+        float:left;
+
+    }
+     
+    .vid-container iframe,
+    .vid-container object,
+    .vid-container embed {
+        position: absolute;
+        top: 0px;
+        left: 0;
+        width: 100%;
+        min-height: 360px;
+
+        background: #ddd;
+        font-family: Arial, Helvetica, sans-serif;
+        border: 8px solid #3FA9F5;
+
+
+    }
+
+
+    /*  VIDEOS PLAYLIST 
+    ############################### */
+    .vid-list-container {
+      border: 8px solid #3FA9F5;
+      height:360px;
+      overflow: hidden;
+
+
+
+
+
+    }
+
+
+  .playlist-heading span {
+  padding-left: 4%;
+
+
+    }
+
+
+.vid-thumb{
+
+margin: 7px;
+    padding: 0px;
+}
+    .vid-list-container:hover, .vid-list-container:focus {
+       overflow-y: auto;
+
+     }
+
+    ol#vid-list {
+      padding:0;
+      background: none;
+    }
+
+    ol#vid-list li {
+      list-style: none;
+    }
+
+    ol#vid-list li a {
+      text-decoration: none;
+      background-color: black;
+      border-top: solid 1px white;
+    }
+
+    ol#vid-list li a:hover {
+      background-color:#666666
+    }
+
+    .vid-thumb {
+      float:left;
+      margin-right: 8px;
+
+
+
+    }
+
+    .active-vid { 
+      background:#3A3A3A;
+    }
+
+    #vid-list .desc {
+      color: #CACACA;
+      font-size: 13px;
+      margin-top:5px;
+
+    }
+
+    .vid-thumb {
+    float: left;
+    margin-right: 0px;
+    margin-top: 15px; 
+}
+
+#vid-list .desc {
+    color: #CACACA;
+    font-size: 13px;
+    margin-left: 5%;
+
+
+    }
+
+
+
+
+@media screen and (max-width: 1024px){
+
+nav li{
+    float: none;
+    width: 100%;/*100% divisé par le nombre d'éléments de menu*/
+    text-align: center;/*Centre le texte dans les éléments de menu*/
+    background-color: #f4f4f4;
+}
+
+
+nav{
+    width: 100%;
+    margin: 0px auto 0px auto;
+    background-color: transparent;
+    position: sticky;
+    margin-top: -2%;
+
+}
+
+nav a{
+    display: block; /*Toute la surface sera cliquable*/
+    text-decoration: none;
+    color: black;
+    border-bottom: 0px solid transparent;/*Evite le décalage des éléments sous le menu à cause de la bordure en :hover*/
+    padding: 10px 0px;/*Agrandit le menu et espace la bordure du texte*/
+}
+
+
+nav a:hover{
+    color: white;
+    border-bottom: 2px solid silver;
+    background-color: #222222;
+
+}
+
+#menu-dashboard li {
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #bcbcbc; 
+}
+
+
+.vid-container {
+    position: relative;
+    padding-bottom: 30%;
+    padding-top: 0%;
+    height: 0;
+    width: 100%; 
+    float: left; 
+}
+
+.vid-list-container {
+    border: 0px solid #3FA9F5;
+    height: 360px;
+    display: table;
+    float: right;
+}
+
+.vid-container iframe, .vid-container object, .vid-container embed {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    min-height: 360px;
+    background: #ddd;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 0px solid #3FA9F5;
+}
+
+
+    .playlist-heading span {
+    padding-right: 0%;
+}
+
+ol#vid-list {
+    padding-top: 165px;
+    background: none;
+
+
+    }
+
+.vid-thumb {
+    width: 100%;
+}
+
+ol#vid-list li a {
+    text-decoration: none;
+    background-color: #222;
+    display: table;
+    padding: 50px;
+
+    }
+
+    #vid-list .desc {
+    color: #CACACA;
+    font-size: 100%;
+    margin-top: 6%;
+    text-align: center;
+    display: table-footer-group;
+
+    }
+
+    .vid-thumb {
+    float: left;
+    margin-right: 8px; */
+}
+
+.toutev{
+
+margin: 0px;
+padding-top: 0px;
+box-shadow: 0px 0px 0px black;
+
+
+
+}
+
+
+.vid-main-wrapper {
+    width: 100%;
+    min-width: 100%;
+    background: #fff;
+    margin: 0 auto;
+    box-shadow: 6px 6px 6px black;
+
+}

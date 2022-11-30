@@ -1,0 +1,254 @@
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #222222 #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #222222;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+  }
+  
+img {
+ width: 100%;
+}
+
+
+
+/*--------------------------------------------
+            DEBUT DE CODE
+---------------------------------------------*/
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Avenir, sans-serif;
+    color: white;
+    
+}
+
+.bannière{
+    background-color: white;
+    text-align: center;
+}
+
+body{
+	background-color: #222222;
+}
+
+/*--------------------------------------------
+                   MENU 
+---------------------------------------------*/
+
+nav{
+
+    width: 100%;
+    margin: 0px auto 40px auto;
+    position: sticky;
+    margin-top: -15px;
+
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+nav li{
+    float: left;
+    width: 25%;/*100% divisé par le nombre d'éléments de menu*/
+    text-align: center;/*Centre le texte dans les éléments de menu*/
+    background-color: #3FA9F5;
+
+}
+
+/*Evite que le menu n'ait une hauteur nulle*/
+nav ul::after{
+    content: "";
+    clear: both;
+}
+
+nav a{
+    display: block; /*Toute la surface sera cliquable*/
+    text-decoration: none;
+    color: black;
+    border-bottom: 2px solid transparent;/*Evite le décalage des éléments sous le menu à cause de la bordure en :hover*/
+    padding: 10px 0px;/*Agrandit le menu et espace la bordure du texte*/
+}
+
+nav a:hover{
+    color: white;
+    border-bottom: 2px solid silver;
+    
+}
+
+/*--------------------------------------------
+                CORPS SITE
+---------------------------------------------*/
+
+.container{
+  text-align: center;
+}
+
+section#contact {
+  background: #fff;
+  color: #000;
+}
+
+section#about,
+section#contact,
+section#portfolio {
+  padding: 150px 0;
+  min-height: 20vh;
+}
+
+.social-menu ul{
+    padding-top: 10vh;
+    height: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.social-menu ul li{
+    list-style: none;
+    margin: 0 15px;
+}
+
+.social-menu ul li .fab{
+    font-size: 30px;
+    line-height: 60px;
+    transition: .3s;
+    color: #000;
+}
+
+.social-menu ul li .fab:hover{
+    color: #fff;
+}
+
+.social-menu ul li a{
+    position: relative;
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #fff;
+    text-align: center;
+    transition: .6s;
+    box-shadow: 0 5px 4px rgba(0,0,0,.5);
+}
+
+.social-menu ul li a:hover{
+    transform: translate(0, -10%);
+}
+
+.social-menu ul li:nth-child(1) a:hover{
+    background-color: #0077b5 ;
+}
+.social-menu ul li:nth-child(2) a:hover{
+    background-color: #c4302b;
+}
+.social-menu ul li:nth-child(3) a:hover{
+    background-color: #8a3ab9;
+}
+.social-menu ul li:nth-child(4) a:hover{
+    background-color: #05CC46;
+}
+
+
+
+/*--------------------------------------------
+            VERSION MOBILE
+---------------------------------------------*/
+
+
+@media screen and (max-width: 1024px){
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Avenir, sans-serif;
+}
+
+
+body {
+  margin: 0;
+  background: #222222;
+}
+
+/*--------------------------------------------
+                MENU MOBILE
+---------------------------------------------*/
+
+nav li{
+    float: none;
+    width: 100%;/*100% divisé par le nombre d'éléments de menu*/
+    text-align: center;/*Centre le texte dans les éléments de menu*/
+    background-color: #f4f4f4;
+}
+
+
+nav{
+    width: 100%;
+    margin: 0px auto 0px auto;
+    background-color: transparent;
+    position: sticky;
+    margin-top: -2%;
+
+}
+
+nav a{
+    display: block; /*Toute la surface sera cliquable*/
+    text-decoration: none;
+    color: black;
+    border-bottom: 0px solid transparent;/*Evite le décalage des éléments sous le menu à cause de la bordure en :hover*/
+    padding: 10px 0px;/*Agrandit le menu et espace la bordure du texte*/
+}
+
+
+nav a:hover{
+    color: white;
+    border-bottom: 2px solid silver;
+    background-color: #222222;
+
+}
+
+
+
+#menu-dashboard li {
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #bcbcbc; 
+}
+
+.social-menu ul{
+    padding-top:10vh;
+    height: 0px;
+
+    margin: 0;
+    display: flex;
+
+}
+
+section#about,
+section#contact,
+section#portfolio {
+  padding: 75px 0;
+  min-height: 20vh;
+}
+
+}
