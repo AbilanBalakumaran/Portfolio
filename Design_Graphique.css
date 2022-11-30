@@ -134,6 +134,11 @@ h1 {
 img {
   height: auto;
   max-width: 100%;
+}
+
+.main img {
+  height: auto;
+  max-width: 100%;
   vertical-align: middle;
 }
 
@@ -275,6 +280,7 @@ nav a:hover{
     background-color: #222222;
 
 }
+
 
 
 
