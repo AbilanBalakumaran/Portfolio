@@ -95,6 +95,12 @@ nav a:hover{
     
 }
 
+.menuclick{
+    color: white;
+    border-bottom: 2px solid silver;
+    
+}
+
 /*--------------------------------------------
                    GRILLE
 ---------------------------------------------*/
@@ -176,6 +182,11 @@ nav a:hover{
 
 }
 
+.menuclick{
+    color: white;
+    border-bottom: 2px solid silver;
+    background-color: #222222;
+}
 
 #menu-dashboard li {
     border-radius: 0;

@@ -94,6 +94,12 @@ nav a:hover{
     
 }
 
+.menuclick{
+    color: white;
+    border-bottom: 2px solid silver;
+    
+}
+
 .conteneur{
   margin: 0px 20px;
   height: 1500px;
@@ -296,6 +302,12 @@ nav a:hover{
     border-bottom: 2px solid silver;
     background-color: #222222;
 
+}
+
+.menuclick{
+    color: white;
+    border-bottom: 2px solid silver;
+    background-color: #222222;
 }
 
 #menu-dashboard li {
