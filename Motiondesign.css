@@ -46,7 +46,8 @@ img {
 
 body{
     background-color: #222222;
-    
+    font: 400 16px/26px "Roboto", sans-serif;
+    letter-spacing: .06em;
 }
 
 /*--------------------------------------------
@@ -270,6 +271,13 @@ margin: 7px;
 
 
 @media screen and (max-width: 1024px){
+
+body {
+    background-color: #222222;
+    font: caption;
+    letter-spacing: .06em;
+
+}    
 
 nav li{
     float: none;

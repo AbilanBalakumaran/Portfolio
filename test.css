@@ -313,7 +313,7 @@ section#portfolio {
 }
 
 h1{
-    text-align: center;
+    text-align: left;
     padding-top: 3%;
     font-size: 18px;
     padding-left: 1%;
@@ -322,14 +322,9 @@ h1{
 }
 
 h4{
-    text-align: center;
+    text-align: left;
     padding-left: 1%;
     padding-bottom: 3%;
-
-}
-
-img.animated-gif{
-  width: 100%;
 
 }
 

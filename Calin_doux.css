@@ -46,8 +46,9 @@ img {
     text-align: center;
 }
 
-body{
-	background-color: #222222;
+body {
+  margin: 0;
+  background: #222222;
 }
 
 /*--------------------------------------------
@@ -222,6 +223,13 @@ body {
 /*--------------------------------------------
                 MENU MOBILE
 ---------------------------------------------*/
+
+body {
+    background-color: #222222;
+    font: caption;
+    letter-spacing: .06em;
+
+}
 
 nav li{
     float: none;

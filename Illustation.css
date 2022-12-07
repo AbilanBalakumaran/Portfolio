@@ -47,8 +47,9 @@ img {
 
 body{
     background-color: #222222;
+    font: 400 16px/26px "Roboto", sans-serif;
+    letter-spacing: .06em;
 }
-
 
 /*--------------------------------------------
                     MENU 
@@ -142,6 +143,13 @@ nav a:hover{
 body {
   margin: 0;
   background: #222222;
+
+}
+
+body {
+    background-color: #222222;
+    font: caption;
+    letter-spacing: .06em;
 
 }
 
