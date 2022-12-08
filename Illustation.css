@@ -109,21 +109,23 @@ nav a:hover{
 .outer-grid {
    display: flex;
    flex-wrap: wrap;
-   padding: 0 4px;
+   padding: 0.2%;
 
 }
 .inner-grid {
    flex: 25%;
    max-width: 33.33%;
-   padding: 0 4px;
+   padding: 0 3px;
 }
 .inner-grid img {
-   margin-top: 8px;
    width: 100%;
-   padding: 10px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
 }
 
+.espace {
+   padding-top: 1%;
+
+}
 
 /*--------------------------------------------
             VERSION MOBILE
