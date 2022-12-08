@@ -160,11 +160,7 @@ section#portfolio {
 }
 
 .social-menu ul{
-    padding-top: 5%;
-    height: 0px;
     display: -webkit-inline-box;
-
-
 }
 
 .social-menu ul li{
@@ -177,35 +173,11 @@ section#portfolio {
     font-size: 30px;
     line-height: 60px;
     transition: .3s;
-    color: #000;
+    color: white;
 }
 
 .social-menu ul li .fab:hover{
-    color: #fff;
-}
-
-.social-menu ul li a{
-    position: relative;
-    display: block;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: #fff;
-    text-align: center;
-    transition: .6s;
-    box-shadow: 0 5px 4px rgba(0,0,0,.5);
-}
-
-.social-menu ul li a:hover{
-    transform: translate(0, -10%);
-}
-
-
-.social-menu ul li:nth-child(1) a:hover{
-    background-color: #c4302b;
-}
-.social-menu ul li:nth-child(2) a:hover{
-    background-color: #8a3ab9;
+    color: #3FA9F5;
 }
 
 
@@ -287,14 +259,9 @@ nav a:hover{
     border-bottom: 1px solid #bcbcbc; 
 }
 
-.social-menu ul{
-    padding-top:10%;
-    height: 0px;
 
-    margin: 0;
-    display: flex;
 
-}
+
 
 section#about,
 section#contact,
