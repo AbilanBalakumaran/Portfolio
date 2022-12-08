@@ -200,17 +200,12 @@ section#portfolio {
     transform: translate(0, -10%);
 }
 
+
 .social-menu ul li:nth-child(1) a:hover{
-    background-color: #0077b5 ;
-}
-.social-menu ul li:nth-child(2) a:hover{
     background-color: #c4302b;
 }
-.social-menu ul li:nth-child(3) a:hover{
+.social-menu ul li:nth-child(2) a:hover{
     background-color: #8a3ab9;
-}
-.social-menu ul li:nth-child(4) a:hover{
-    background-color: #05CC46;
 }
 
 
