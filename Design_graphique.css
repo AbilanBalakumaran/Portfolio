@@ -336,12 +336,14 @@ img {
     transition: all 125ms ease-in;
     transform: scale(1.03);
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
 }
+
 
 .card_content {
   padding: 2rem 2rem 2rem;
   background: linear-gradient(to bottom left, #3f55f5 40%, #1d2499 100%);
-
+  height: 60%;
 }
 
 .card_title {
