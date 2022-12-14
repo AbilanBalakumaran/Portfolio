@@ -294,7 +294,7 @@ img {
 }
 
 .cards {
-  display: flex;
+
   flex-wrap: wrap;
   list-style: none;
   margin: 0;
@@ -303,7 +303,7 @@ img {
 }
 
 .cards_item {
-  display: flex;
+
   padding: 1rem;
 }
 
@@ -322,8 +322,6 @@ img {
 .card {
   margin-top: 3pc;
   border-radius: 0.25rem;
-
-  display: flex;
   flex-direction: column;
   overflow: hidden;
   transition: .2s ease-in-out 0s;
@@ -405,15 +403,6 @@ body {
 ---------------------------------------------*/
 
 
-.card {
-  margin-top: 3pc;
-  border-radius: 0.25rem;
-
-
-  flex-direction: column;
-  overflow: hidden;
-
-}
 
 
 .card:hover {
@@ -454,16 +443,6 @@ img.animated-gif{
 
 }
 @media only screen and (min-width: 1000px) {
-
-.card {
-  margin-top: 3pc;
-  border-radius: 0.25rem;
-
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-
-}
 
 
 .card:hover {
@@ -521,16 +500,6 @@ Main site content
 }
 
 @media only screen and (min-width: 1000px) {
-
-.card {
-  margin-top: 3pc;
-  border-radius: 0.25rem;
-
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-
-}
 
 
 .card:hover {
