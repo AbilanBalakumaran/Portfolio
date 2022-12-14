@@ -493,8 +493,8 @@ body {
 }
 
 ol#vid-list {
-    padding-top: 117px;
-    display: inline-table;
+    padding-top: 11pc;
+    display: block;
     background: none;
 
 
@@ -532,7 +532,7 @@ ol#vid-list li a {
 margin: 0px;
 padding-top: 0px;
 box-shadow: 0px 0px 0px black;
-
+padding-top: 4pc;
 
 
 }
