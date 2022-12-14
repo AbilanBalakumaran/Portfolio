@@ -1,3 +1,132 @@
+/* -------------------------------- 
+
+Primary style
+
+-------------------------------- */
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+
+.content li a {
+  color: black;
+  text-decoration: none;
+  display: block;
+
+}
+
+
+.content li a:hover {
+
+      background-color: #222222;
+      cursor: pointer;
+      color: white;
+      text-decoration-color: white;
+      overflow: hidden;
+}
+
+
+li#about.dropdown.gallery div.content ul li:hover{
+      background-color: #222222;
+      cursor: pointer;
+      color: white;
+      text-decoration-color: white;
+
+}
+
+/* -------------------------------- 
+
+ Header Menu deroulant
+
+-------------------------------- */
+.cd-morph-dropdown {
+  position: relative;
+  height: 60px;
+  background-color: none;
+}
+
+
+.cd-morph-dropdown::before {
+  /* never visible - used in JS to check mq */
+  content: "mobile";
+  display: none;
+}
+.cd-morph-dropdown .nav-trigger {
+  /* menu icon - visible on small screens only */
+  position: absolute;
+  top: 0;
+  height: 60px;
+  width: 60px;
+  /* replace text with icon */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  color: transparent;
+}
+.cd-morph-dropdown .nav-trigger span, .cd-morph-dropdown .nav-trigger span::after, .cd-morph-dropdown .nav-trigger span::before {
+  /* these are the 3 lines of the menu icon */
+  position: absolute;
+  background-color: white;
+  height: 3px;
+  width: 26px;
+}
+.cd-morph-dropdown .nav-trigger span {
+  left: 50%;
+  top: 50%;
+  bottom: auto;
+  right: auto;
+  transform: translateX(-50%) translateY(-50%);
+  transition: background-color 0.3s;
+}
+.cd-morph-dropdown .nav-trigger span::after, .cd-morph-dropdown .nav-trigger span::before {
+  content: "";
+  left: 0;
+  transition: transform 0.3s;
+}
+.cd-morph-dropdown .nav-trigger span::before {
+  transform: translateY(-9px);
+}
+.cd-morph-dropdown .nav-trigger span::after {
+  transform: translateY(9px);
+}
+.cd-morph-dropdown.nav-open .nav-trigger span {
+  background-color: transparent;
+}
+.cd-morph-dropdown.nav-open .nav-trigger span::before {
+  transform: rotate(45deg);
+}
+.cd-morph-dropdown.nav-open .nav-trigger span::after {
+  transform: rotate(-45deg);
+}
+.cd-morph-dropdown .main-nav {
+  display: none;
+}
+.cd-morph-dropdown .morph-dropdown-wrapper {
+  display: none;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  padding: 1.2em 5%;
+  box-shadow: inset 0 1px 0 #dddddd;
+  background-color: #F6F6F6;
+}
+.cd-morph-dropdown.nav-open .morph-dropdown-wrapper {
+  display: block;
+  text-align: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+
+.cd-morph-dropdown .gallery .content li {
+  margin-bottom: 1.4em;
+}
+
+
 /* ===== Scrollbar CSS ===== */
   /* Firefox */
   * {
@@ -8,6 +137,7 @@
   /* Chrome, Edge, and Safari */
   *::-webkit-scrollbar {
     width: 16px;
+    
   }
 
   *::-webkit-scrollbar-track {
@@ -26,7 +156,6 @@ img {
 }
 
 
-
 /*--------------------------------------------
             DEBUT DE CODE
 ---------------------------------------------*/
@@ -36,20 +165,17 @@ img {
 *{
     margin: 0px;
     padding: 0px;
-    font-family: Avenir, sans-serif;
+
     color: white;
     
 }
 
-.bannière{
-    background-color: white;
-    text-align: center;
+body{
+    background-color: #222222;
+    font: 400 16px/26px "Roboto", sans-serif;
+    letter-spacing: .06em;
 }
 
-body {
-  margin: 0;
-  background: #222222;
-}
 
 /*--------------------------------------------
                    MENU 
@@ -72,7 +198,7 @@ nav li{
     float: left;
     width: 25%;/*100% divisé par le nombre d'éléments de menu*/
     text-align: center;/*Centre le texte dans les éléments de menu*/
-    background-color: #3FA9F5;
+    background-color: transparent;
 
 }
 
@@ -96,16 +222,78 @@ nav a:hover{
     
 }
 
-.menuclick{
-    color: white;
-    border-bottom: 2px solid silver;
-    
-}
+
 
 /*--------------------------------------------
-                CORPS SITE
+            VERSION MOBILE
 ---------------------------------------------*/
 
+
+@media screen and (max-width: 1024px){
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+
+}
+
+
+body {
+  margin: 0;
+  background: #222222;
+  font: 400 16px/26px "Roboto", sans-serif;
+}
+
+body {
+    background-color: #222222;
+    letter-spacing: .06em;
+
+}
+
+h1{
+
+  line-height: initial;
+}
+
+}
+@media only screen and (min-width: 1000px) {
+  .cd-morph-dropdown {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 0;
+    text-align: center;
+
+  }
+  .cd-morph-dropdown::before {
+    content: "desktop";
+
+  }
+  .cd-morph-dropdown .nav-trigger {
+    display: none;
+  }
+  .cd-morph-dropdown .main-nav {
+    display: inline-block;
+  }
+  .cd-morph-dropdown .main-nav > ul > li {
+    display: inline-block;
+    float: left;
+  }
+  .cd-morph-dropdown .main-nav > ul > li > a {
+    display: block;
+
+    height: 70px;
+    line-height: 70px;
+    color: #F6F6F6;
+    font-size: 1.8rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: opacity 0.2s;
+  }
+
+}
 
 .article-content {
 
@@ -154,51 +342,7 @@ section {
 }
 
 
-.section--text{
-  margin-top: 1.6rem
-}
 
-.section img{
-    max-width: 100%;
-  max-height: 100%;
-    margin-left: auto;
-    margin-right: auto
-}
-
-.outer-grid {
-   display: flex;
-   flex-wrap: wrap;
-   padding: 0 4px;
-
-}
-.inner-grid {
-   flex: 25%;
-   padding: 0 4px;
-}
-.inner-grid img {
-   margin-top: 8px;
-   width: 100%;
-
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-}
-
-.outer-grid2 {
-   display: flex;
-   flex-wrap: wrap;
-   padding: 0 4px;
-
-}
-.inner-grid2 {
-   flex: 25%;
-   max-width: 33.33%;
-   padding: 0 4px;
-}
-.inner-grid2 img {
-   margin-top: 8px;
-   width: 100%;
-
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-}
 
 /*--------------------------------------------
             VERSION MOBILE
@@ -208,81 +352,14 @@ section {
 @media screen and (max-width: 1024px){
 
 
-*{
-    margin: 0px;
-    padding: 0px;
-    
+.cd-morph-dropdown {
+
+  background-color: #222222;
 }
-
-
-body {
-  margin: 0;
-  background: #222222;
-}
-
-/*--------------------------------------------
-                MENU MOBILE
----------------------------------------------*/
-
-body {
-    background-color: #222222;
-    font: caption;
-    letter-spacing: .06em;
-
-}
-
-nav li{
-    float: none;
-    width: 100%;/*100% divisé par le nombre d'éléments de menu*/
-    text-align: center;/*Centre le texte dans les éléments de menu*/
-    background-color: #f4f4f4;
-}
-
-
-nav{
-    width: 100%;
-    margin: 0px auto 0px auto;
-    background-color: transparent;
-    position: sticky;
-    margin-top: -2%;
-
-}
-
-nav a{
-    display: block; /*Toute la surface sera cliquable*/
-    text-decoration: none;
-    color: black;
-    border-bottom: 0px solid transparent;/*Evite le décalage des éléments sous le menu à cause de la bordure en :hover*/
-    padding: 10px 0px;/*Agrandit le menu et espace la bordure du texte*/
-}
-
-
-nav a:hover{
-    color: white;
-    border-bottom: 2px solid silver;
-    background-color: #222222;
-
-}
-
-.menuclick{
-    color: white;
-    border-bottom: 2px solid silver;
-    background-color: #222222;
-}
-
-#menu-dashboard li {
-    border-radius: 0;
-    margin: 0;
-    padding: 0;
-    border-bottom: 1px solid #bcbcbc; 
-}
-
 
 .article-content {
 
     width: 90%;
-
-
 }
 
 .outer-grid {
@@ -306,4 +383,22 @@ nav a:hover{
  width: 100%;
  }
 
+
+
 }
+
+/*--------------------------------------------
+                MENU MOBILE
+---------------------------------------------*/
+.cd-main-content {
+  min-height: 100vh;
+
+}
+
+@media only screen and (min-width: 1000px) {
+  .cd-main-content {
+    padding-top: 80px;
+  }
+}
+
+

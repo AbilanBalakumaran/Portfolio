@@ -3,30 +3,96 @@
 <head>
 
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="StorySaga.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./StorySaga.css">
   <link rel="icon" href="icon.png" />
   <title>Portfolio</title>
-    <header class="main-header">
-    <a href="index.html"><img src="banniere_logo.jpg" alt= "bannière"></a>
-    </header>
 </head>
 
 
-<body>
-  <div class="bannière"></div>
-  
+<! -------------------------------- 
 
-<nav>
-  <ul id="menu-dashboard">
-    <li><a href="index.html">Accueil</a></li>
-    <li><a href="Design_Graphique.html" class="menuclick">Design Graphique</a></li>
-    <li><a href="Illustation.html">Illustrations</a></li>
-    <li><a href="Video.html">Vidéos</a></li>
-  </ul>
-</nav>
+              Menu
 
-  <!--end header section-->
+-------------------------------- >
+
+
+  <header class="cd-morph-dropdown">
+    <a href="#0" class="nav-trigger">Open Nav<span aria-hidden="true"></span></a>
+    
+    <nav class="main-nav">
+      <ul>
+        <li data-content="about">
+          <a href="index.html">Accueil</a>
+        </li>
+
+        <li data-content="pricing">
+          <a href="Design_graphique.html"style="color: white;border-bottom: 2px solid silver;">Design Graphique</a>
+        </li>
+
+        <li data-content="contact">
+          <a href="Illustation.html">Illustrations</a>
+        </li>
+
+        <li data-content="contact">
+          <a href="Vidéo.html">Vidéos</a>
+        </li>
+
+      </ul>
+    </nav>
+    
+    <div class="morph-dropdown-wrapper">
+      <div class="dropdown-list">
+        <ul>
+          <li id="about" class="dropdown gallery">
+
+            
+            <div class="content" >  
+              <ul>
+
+
+                <li  >
+                  <a href="index.html" >
+                    Accueil
+                    <hr>
+                  </a>
+                </li>
+
+
+
+                <li style="background-color: #222222;">
+                  <a href="Design_graphique.html"style="color: white;" >
+                    Design Graphique
+                    <hr>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="Illustation.html">
+                    Illustrations
+                    <hr>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="Vidéo.html">
+                    Vidéo
+                    <hr>
+                  </a>
+                </li>
+
+
+              </ul>
+            </div>
+          </li>
+
+
+  </header>
+
+
+
+  <main class="cd-main-content">
+ <!--end header section-->
  <div class="article-content">
     <main class="article-body">
       <h1>Projet : StorySaga</h1>
@@ -133,6 +199,21 @@
 
  </section>
 </section>
-</html>
+
+</body>
+
+  </main>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<script>
+  if( !window.jQuery ) document.write('<script src="js/jquery-3.0.0.min.js"><\/script>');
+</script>
+<script src="js/modernizr-custom.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+</body>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script><script  src="./script.js"></script>
+
+
+
 </body>
 </html>
