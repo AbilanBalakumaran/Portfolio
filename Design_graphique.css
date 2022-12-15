@@ -290,7 +290,8 @@ img {
 }
 
 .btn:hover {
-  background-color: #222222;
+  background-color: rgba(255, 255, 255, 0.12);
+
 }
 
 .cards {
