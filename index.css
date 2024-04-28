@@ -489,6 +489,7 @@ height: 106%;
     cursor: pointer;
     transition: background-color 0.3s;
     font-family: poppins;
+    text-decoration: none;
 }
 
 #voir-plus:hover {
