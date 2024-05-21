@@ -378,93 +378,26 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 
+<script type="text/javascript">
+    
+document.addEventListener("DOMContentLoaded", function() {
+    const prevButton = document.querySelector(".prev");
+    const nextButton = document.querySelector(".next");
+    const videos = document.querySelectorAll("iframe");
 
+    prevButton.addEventListener("click", stopVideos);
+    nextButton.addEventListener("click", stopVideos);
 
-
-</script>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        // Get all the video iframes
-        var videos = document.querySelectorAll("iframe");
-
-        // Get the prev and next buttons
-        var prevButton = document.querySelector(".prev");
-        var nextButton = document.querySelector(".next");
-
-        // Function to stop all videos
-        function stopVideos() {
-            videos.forEach(function(video) {
-                var src = video.src;
-                video.src = "";
-                video.src = src;
-            });
-        }
-
-        // Add click event listener to the prev button
-        prevButton.addEventListener("click", function() {
-            stopVideos();
-        });
-
-        // Add click event listener to the next button
-        nextButton.addEventListener("click", function() {
-            stopVideos();
-        });
-    });
-</script>
-
-<script>
-    // Array to store the YouTube player instances
-    var players = [];
-
-    // Function to initialize YouTube players
-    function onYouTubeIframeAPIReady() {
-        var iframes = document.querySelectorAll(".iframe-container iframe");
-        iframes.forEach(function(iframe, index) {
-            players[index] = new YT.Player(iframe, {
-                events: {
-                    'onReady': onPlayerReady
-                }
-            });
+    function stopVideos() {
+        videos.forEach(video => {
+            const src = video.src;
+            video.src = "";
+            video.src = src;
         });
     }
+});
 
-    // Function to be called when a player is ready
-    function onPlayerReady(event) {
-        // Players are ready to be controlled
-    }
-
-    // Function to stop all videos and switch to the next video
-    function switchVideos() {
-        players.forEach(function(player) {
-            player.stopVideo();
-        });
-
-        // Toggle visibility to reset iframe state
-        var iframeContainers = document.querySelectorAll(".iframe-container");
-        iframeContainers.forEach(function(container) {
-            container.style.display = 'none';
-            setTimeout(function() {
-                container.style.display = 'block';
-            }, 0); // Immediate display reset
-        });
-    }
-
-    // Wait for the DOM to be fully loaded
-    document.addEventListener("DOMContentLoaded", function() {
-        // Get the prev and next buttons
-        var prevButton = document.querySelector(".prev");
-        var nextButton = document.querySelector(".next");
-
-        // Add click event listener to the prev button
-        prevButton.addEventListener("click", function() {
-            switchVideos();
-        });
-
-        // Add click event listener to the next button
-        nextButton.addEventListener("click", function() {
-            switchVideos();
-        });
-    });
+    
 </script>
 
 
