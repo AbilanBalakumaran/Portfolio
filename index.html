@@ -413,12 +413,12 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <script>
-    // Create an array to store the YouTube player instances
+    // Array to store the YouTube player instances
     var players = [];
 
     // Function to initialize YouTube players
     function onYouTubeIframeAPIReady() {
-        var iframes = document.querySelectorAll("iframe");
+        var iframes = document.querySelectorAll(".iframe-container iframe");
         iframes.forEach(function(iframe, index) {
             players[index] = new YT.Player(iframe, {
                 events: {
@@ -433,12 +433,19 @@ document.addEventListener('DOMContentLoaded', function() {
         // Players are ready to be controlled
     }
 
-    // Function to pause all videos
-    function pauseVideos() {
+    // Function to stop all videos and switch to the next video
+    function switchVideos() {
         players.forEach(function(player) {
-            if (player && player.pauseVideo) {
-                player.pauseVideo();
-            }
+            player.stopVideo();
+        });
+
+        // Toggle visibility to reset iframe state
+        var iframeContainers = document.querySelectorAll(".iframe-container");
+        iframeContainers.forEach(function(container) {
+            container.style.display = 'none';
+            setTimeout(function() {
+                container.style.display = 'block';
+            }, 0); // Immediate display reset
         });
     }
 
@@ -450,16 +457,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Add click event listener to the prev button
         prevButton.addEventListener("click", function() {
-            pauseVideos();
+            switchVideos();
         });
 
         // Add click event listener to the next button
         nextButton.addEventListener("click", function() {
-            pauseVideos();
+            switchVideos();
         });
     });
 </script>
 
+
 </body>
 </html>
-
