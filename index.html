@@ -292,33 +292,7 @@
 
 
 
-<script>
-    const slider = document.querySelector('.slider');
-    const slides = document.querySelectorAll('.slide');
-    const prev = document.querySelector('.prev');
-    const next = document.querySelector('.next');
 
-    let currentIndex = 0;
-    const slideWidth = slides[0].clientWidth;
-
-    function goToSlide(index) {
-        if (index < 0) {
-            index = slides.length - 1;
-        } else if (index >= slides.length) {
-            index = 0;
-        }
-        slider.style.transform = `translateX(${-index * slideWidth}px)`;
-        currentIndex = index;
-    }
-
-    prev.addEventListener('click', () => {
-        goToSlide(currentIndex - 1);
-    });
-
-    next.addEventListener('click', () => {
-        goToSlide(currentIndex + 1);
-    });
-</script>
 
 <script type="text/javascript">
     
@@ -378,26 +352,39 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 
-<script type="text/javascript">
-    
-document.addEventListener("DOMContentLoaded", function() {
-    const prevButton = document.querySelector(".prev");
-    const nextButton = document.querySelector(".next");
-    const videos = document.querySelectorAll("iframe");
 
-    prevButton.addEventListener("click", stopVideos);
-    nextButton.addEventListener("click", stopVideos);
+<script>
+    const slider = document.querySelector('.slider');
+    const slides = document.querySelectorAll('.slide');
+    const prev = document.querySelector('.prev');
+    const next = document.querySelector('.next');
 
-    function stopVideos() {
-        videos.forEach(video => {
-            const src = video.src;
-            video.src = "";
-            video.src = src;
-        });
+    let currentIndex = 0;
+    const slideWidth = slides[0].clientWidth;
+
+    function goToSlide(index) {
+        if (index < 0) {
+            index = slides.length - 1;
+        } else if (index >= slides.length) {
+            index = 0;
+        }
+        slider.style.transform = `translateX(${-index * slideWidth}px)`;
+        currentIndex = index;
     }
-});
 
-    
+    prev.addEventListener('click', () => {
+        goToSlide(currentIndex - 1);
+    });
+
+    next.addEventListener('click', () => {
+        goToSlide(currentIndex + 1);
+    });
+</script>
+
+
+
+
+
 </script>
 
 
