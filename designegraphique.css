@@ -263,7 +263,7 @@ section#portfolio {
 .container h2 {
     text-align: center;
     margin-bottom: 30px;
-    color: #333;
+    color: #605f5f;
 }
 
 .social-links {
@@ -273,7 +273,7 @@ section#portfolio {
 
 .social-links a {
     font-size: 24px;
-    color: #333;
+    color: #605f5f;
     margin: 0 10px;
     transition: color 0.3s;
 }
