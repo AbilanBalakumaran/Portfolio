@@ -1,329 +1,189 @@
-html{
+<!DOCTYPE html>
+<html>
+<head>
 
-    scroll-behavior: smooth;
-}
-/* -------------------------------- 
-
-Primary style
-
--------------------------------- */
-*, *::after, *::before {
-  box-sizing: border-box;
-}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./designegraphique.css">
+  <link rel="icon" href="icon.png" />
 
 
-/* ===== Scrollbar CSS ===== */
-  /* Firefox */
 
-  * {
-    scrollbar-width: auto;
-    scrollbar-color: #222222 #ffffff;
+<!-- Primary Meta Tags -->
+<title>Abilan Balakumaran</title>
+<meta name="title" content="Design Graphique">
+<meta name="description" content="Directeur artistique / Motion designer">
 
-  }
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://abilanbalakumaran.github.io/Portfolio/">
+<meta property="og:title" content="Abilan Balakumaran">
+<meta property="og:description" content="Directeur artistique / Motion designer">
+<meta property="og:image" content="logo-abilan.png?raw=true">
 
-  /* Chrome, Edge, and Safari */
-  *::-webkit-scrollbar {
-    width: 0px;
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://abilanbalakumaran.github.io/Portfolio/">
+<meta property="twitter:title" content="Abilan Balakumaran">
+<meta property="twitter:description" content="Directeur artistique / Motion designer">
+<meta property="twitter:image" content="logo-abilan.png?raw=true">
+
+</head>
+
+<div id="navigation">
+  <div id="menuToggle">
     
-  }
-
-  *::-webkit-scrollbar-track {
-    background: #ffffff;
-  }
-
-  *::-webkit-scrollbar-thumb {
-    background-color: #222222;
-    border-radius: 10px;
-    border: 3px solid #ffffff;
-  }
-  
-
-
-/*--------------------------------------------
-            DEBUT DE CODE
----------------------------------------------*/
-
-
-*{
-    margin: 0px;
-    padding: 0px;
-}
-
-
-/*--------------------------------------------
-                   MENU 
----------------------------------------------*/
-div#navigation{
-    position: fixed;
-    z-index: ;
-    height: 0%;
-}
-
-#menu_mob a{
-  text-decoration:none;
-  color:grey;
-  transition: .1s all;
-}
-
-#menu_mob a:hover{
-   color:white;
-}
-
-#menuToggle
-{
-  position:fixed;
-  display: block;
-  position: relative;
-  top: 30px;
-  left: 19px;
-  z-index: 1;
-  -webkit-user-select: none;
-  user-select: none;
-    height: 0%;
-}
-
-#menuToggle input
-{
-  display: block;
-  width: 40px;
-  height: 32px;
-  position: absolute;
-  top: -7px;
-  left: -5px;
-  
-  cursor: pointer;
-  
-  opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
-  
-  -webkit-touch-callout: none;
-}
-
-/*
- * Just a quick hamburger
- */
-#menuToggle span
-{
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
-  position: relative;
-
-  border-radius: 3px;
-  background-color: #00a5da;
-  z-index: 1;
-  
-  transform-origin: 4px 0px;
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
-}
-
-
-
-
-
-#menuToggle span:first-child
-{
-  transform-origin: 0% 0%;
-}
-
-#menuToggle span:nth-last-child(2)
-{
-  transform-origin: 0% 100%;
-}
-
-/* 
- * Transform all the slices of hamburger
- * into a crossmark.
- */
-#menuToggle input:checked ~ span
-{
-  opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
-}
-
-/*
- * But let's hide the middle one.
- */
-#menuToggle input:checked ~ span:nth-last-child(3)
-{
-  opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
-}
-
-/*
- * Ohyeah and the last one should go the other direction
- */
-#menuToggle input:checked ~ span:nth-last-child(2)
-{
-  opacity: 1;
-  transform: rotate(-45deg) translate(0, -1px);
-}
-
-/*
- * Make this absolute positioned
- * at the top left of the screen
- */
-#menu_mob
-{
-  
-  width: 300px;
-  margin: -100px 0 0 -50px;
-  padding: 50px;
-  padding-top: 125px;
-  
-  background: black;
-  list-style-type: none;
-  -webkit-font-smoothing: antialiased;
-  /* to stop flickering of text in safari */
-  
-  transform-origin: 0% 0%;
-  transform: translate(-100%, 0);
-  padding-bottom: 500%;
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-}
-
-#menu_mob li
-{
-  padding: 10px 0;
-  font-size: 22px;
-}
-
-/*
- * And let's fade it in from the left
- */
-#menuToggle input:checked ~ ul
-{
-  transform: scale(1.0, 1.0);
-  opacity: 1;
+    <input id="menu_mob_imp" type="checkbox" />
 
-}
+    <span></span>
+    <span></span>
+    <span></span>
+          
+    <ul id="menu_mob">
+      <a href="index.html" ><li>Accueil</li></a>
+      <a href="designegraphique.html"style="color: #00a5da;"><li>Design Graphique</li></a>
+       <a href="graphicdesign.html"><li><button class="ripple">EN - English</button></li></a>
+    </ul>
+  </div>
+</div>
 
 
+<! -------------------------------- 
 
-  
-img {
- width: 100%;
-}
+                    Contenu site
 
+-------------------------------- >
 
 
-/*--------------------------------------------
-            DEBUT DE CODE
----------------------------------------------*/
 
+    <main class="cd-main-content">
 
+        <br>
+<div class="espace"></div>
+        <h3 style="color: white; text-align: center;">DESIGN GRAPHIQUE</h3>
+        <br>
+ <section id="about" ng-controller="aboutCtrl as about">
+  <!--end header section-->
+<div class="outer-grid">
+<div class="inner-grid">
+<img src="Design_graphique/WAAT/BANNER-ROSEUP.gif"/>
+<img src="Design_graphique/WAAT/flyers_borne.png"/>
+<img src="Design_graphique/Créations_diverses/image-3.jpg"/>
+<img src="Design_graphique/Calin_doux/calin doux.png"/>
+<img src="Design_graphique/Calin_doux/catalogues.jpg"/>
+<img src="Design_graphique/Créations_diverses/image-21.jpg"/>
+<img src="Design_graphique/StorySaga/exterieur.jpg"/>
+<img src="Design_graphique/StorySaga/interieur.jpg"/>
 
-body{
-    background-color: #222222;
-    font: 400 16px/26px "poppins", sans-serif;
-    letter-spacing: .06em;
-}
 
 
-/*--------------------------------------------
-                CORPS SITE
----------------------------------------------*/
 
 
+</div>
+<div class="inner-grid">
 
+<img src="Design_graphique/Créations_diverses/image-16.jpeg"/>
+<img src="Design_graphique/Créations_diverses/image-17.jpeg"/>
+<img src="Design_graphique/Créations_diverses/image-7.png"/>
+<img src="Design_graphique/Créations_diverses/image-18.jpg"/>
+<img src="Design_graphique/The_Traveller/carte de visite2.jpg"/>
+<img src="Design_graphique/The_Traveller/newsletter.jpg"/>
+<img src="Design_graphique/The_Traveller/Broshure Montagne.jpg"/>
+<img src="Design_graphique/Créations_diverses/image-23.png"/>
 
 
-.container{
-  text-align: center;
 
-}
 
 
-section#about,
-section#contact,
-section#portfolio {
-    padding: 11%;
-    min-height: 20vh;
-    padding-top: 2%;
-}
 
 
-/* Styles de base de la section Réseaux sociaux et e-mail */
-#social {
-    background-color: rgb(15,15,15);
-    padding: 50px 0;
-}
 
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 20px;
 
-}
+</div>
 
-.container h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    color: #605f5f;
-}
 
-.social-links {
-    display: flex;
-    justify-content: center;
-}
 
-.social-links a {
-    font-size: 24px;
-    color: #605f5f;
-    margin: 0 10px;
-    transition: color 0.3s;
-}
 
-.social-links a:hover {
-    color: #00a5da;
-}
+<div class="inner-grid">
 
 
+<img src="Design_graphique/Créations_diverses/image-8.jpg"/>
+<img src="Design_graphique/Créations_diverses/image-29.jpg"/>
+<img src="Design_graphique/Créations_diverses/image-9.jpg"/>
+<img src="Design_graphique/Créations_diverses/image-13.jpg"/>
+<img src="Design_graphique/Créations_diverses/image-11.jpg"/>
+<img src="Design_graphique/Créations_diverses/image-10.jpg"/>
+<img src="Design_graphique/Créations_diverses/image-24.png"/>
 
-/*--------------------------------------------
-            VERSION MOBILE
----------------------------------------------*/
 
 
-@media screen and (max-width: 1024px){
 
 
 
-.inner-grid {
-    max-width: 100%;
-}
+</div>
+ </section>
 
 
-}
 
 
-@media only screen and (min-width: 1000px) {
+</div>
+ </section>
 
+<section id="social">
+    <div class="container">
+        <h2>CONTACTER-MOI</h2>
+        <div class="social-links">
+            <a href="mailto:Abilan.Balakumaran@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.behance.net/AbilanBalakumaran" target="_blank"><i class="fab fa-behance"></i></a>
+            <a href="https://www.instagram.com/abilan_motion/?hl=fr" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@sukiamv" target="_blank"><i class="fab fa-youtube"></i></a>
+            
+            
 
-  .cd-morph-dropdown {
+        </div>
+    </div>
+</section>
 
-  background-color: transparent;
-}
 
-  .cd-main-content {
-    padding-top: 2%;
-  }
 
-.outer-grid {
-   display: flex;
-   flex-wrap: wrap;
-   padding-top: 0pc;
 
-}
-.inner-grid {
-   flex: 25%;
-   max-width: 33.33%;
-   padding: 0 3px;
-}
-  
-}
+    <! -------------------------------- 
+
+                Javascript link
+
+-------------------------------- >
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<script>
+    if( !window.jQuery ) document.write('<script src="js/jquery-3.0.0.min.js"><\/script>');
+</script>
+<script src="js/modernizr-custom.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+</body>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script><script  src="./script.js"></script>
+<script src="https://kit.fontawesome.com/a538955585.js" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+    
+    document.addEventListener('DOMContentLoaded', function() {
+    const scrollToBottomButton = document.getElementById('scrollToBottom');
+
+    scrollToBottomButton.addEventListener('click', function(event) {
+        event.preventDefault(); // Empêche le comportement par défaut du lien
+        const targetSection = document.querySelector(this.getAttribute('href'));
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+    });
+});
+
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
 
