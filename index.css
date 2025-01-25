@@ -1,0 +1,617 @@
+html{
+
+    scroll-behavior: smooth;
+    font: 400 16px/26px "poppins", sans-serif;
+}
+/* -------------------------------- 
+
+Primary style
+
+-------------------------------- */
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+
+.content li a {
+  color: black;
+  text-decoration: none;
+  display: block;
+
+}
+
+
+.content li a:hover {
+
+
+      cursor: pointer;
+      color: #2577d5;
+      text-decoration-color: white;
+      overflow: hidden;
+}
+
+
+
+
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #222222 #ffffff;
+
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 0px;
+    
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #222222;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+  }
+  
+
+
+/*--------------------------------------------
+            DEBUT DE CODE
+---------------------------------------------*/
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: #222222;
+    font: 400 16px/26px "poppins", sans-serif;
+    letter-spacing: .06em;
+}
+
+/*--------------------------------------------
+                   MENU 
+---------------------------------------------*/
+div#navigation{
+    position: fixed;
+    z-index: ;
+}
+
+#menu_mob a{
+  text-decoration:none;
+  color:grey;
+  transition: .1s all;
+}
+
+#menu_mob a:hover{
+   color:white;
+}
+
+#menuToggle
+{
+  position:fixed;
+  display: block;
+  position: relative;
+  top: 30px;
+  left: 19px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+
+  border-radius: 3px;
+  background-color: #00a5da;
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+
+
+
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  opacity: 1;
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu_mob
+{
+  
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  
+  background: black;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  padding-bottom: 500%;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu_mob li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * And let's fade it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: scale(1.0, 1.0);
+  opacity: 1;
+
+}
+
+#navigation,
+#menuToggle {
+    height: 0%;
+    transition: width 0.5s; /* Ajoute une transition pour une animation en douceur */
+}
+
+
+/* Ripple effect */
+.ripple {
+  background-position: center;
+  transition: background 0.8s;
+}
+.ripple:hover {
+  background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
+}
+.ripple:active {
+  background-color: #6eb9f7;
+  background-size: 100%;
+  transition: background 0s;
+}
+
+/* Button style */
+button {
+  border: none;
+  border-radius: 2px;
+  padding: 12px 18px;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: white;
+  background-color: #2196f3;
+  outline: none;
+}
+
+
+/*--------------------------------------------
+                CORPS SITE
+---------------------------------------------*/
+
+main.cd-main-content{
+    color: white;
+}
+
+
+object#Bandeau{
+
+margin-left: 25%;
+margin-bottom: 5%;
+margin-top: 5%;
+  margin-right: 26%;
+}
+
+
+
+img.animated-gif{
+  width: 90%;
+  height: auto;
+  text-align: left;
+
+}
+
+
+h1{
+    padding-top: 2%;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+h4{
+    text-align: center;
+}
+
+h3{
+    color: black;
+    padding-top: 3%;
+}
+
+.outer-grid {
+   display: flex;
+   flex-wrap: wrap;
+   padding: 0 4px;
+
+
+
+}
+.inner-grid {
+
+   max-width: 50%;
+
+}
+
+
+
+.container{
+  text-align: center;
+
+}
+
+section#contact {
+  background: #fff;
+  color: #000;
+}
+
+section#about,
+section#contact,
+section#portfolio {
+    padding: 14%;
+    min-height: 20vh;
+    padding-top: 0%;
+    padding-bottom:4%;
+}
+
+section.pourquoi{
+  background-color: white;
+}
+
+
+
+
+    .slider-container {
+        width: 72%;
+        margin: 1% auto;
+        position: relative;
+        overflow: hidden;
+    }
+    .slider {
+        width: 100%;
+        display: flex;
+        transition: transform 0.5s ease;
+    }
+    .slide {
+        min-width: 100%;
+        overflow: hidden;
+    }
+    .slide video {
+        width: 100%;
+        padding: 5%;
+        height: auto;
+    }
+    .prev,
+    .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        padding: 10px;
+        cursor: pointer;
+    }
+    .prev {
+        left: 0;
+        background-color: #00a5da;
+    }
+    .next {
+        right: 0;
+        background-color: #00a5da;
+    }
+
+    .slide {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%; /* Ratio 16:9 */
+        overflow: hidden;
+    }
+    .slide iframe {
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        width: 90%;
+        height: 90%;
+    }
+
+
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+.grille {
+    max-width: 70pc;
+    width: 80%;
+    height: auto;
+    margin: 30px auto;
+    /* border: 1px solid #333; */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    justify-content: center;
+    grid-gap: 10px;
+}
+.grid-item {
+    width: 300px;
+    height: 200px;
+    background: #333;
+}
+
+
+.crop {
+
+overflow: hidden;
+}
+
+.crop img {
+height: 106%;
+
+}
+
+
+/* Styles de base du bouton avec dégradé linéaire */
+.rounded-button {
+    background: #00a5da; /* Dégradé linéaire à 90 degrés */
+    border: none; /* Supprime la bordure */
+    color: white; /* Couleur du texte */
+    padding: 15px 32px; /* Rembourrage intérieur */
+    text-align: center; /* Centre le texte horizontalement */
+    text-decoration: none; /* Supprime la décoration du texte */
+    display: inline-block; /* Affichage en ligne */
+    font-size: 16px; /* Taille de la police */
+    margin: 4px 2px; /* Marge externe */
+    cursor: pointer; /* Curseur de type pointeur */
+    border-radius: 40px; /* Coins arrondis */
+    font-family: 'Poppins', sans-serif; /* Police Poppins */
+    font-weight: 700; /* Gras */
+    transition: background-color 0.3s; /* Transition de couleur de fond */
+}
+
+/* Animation au survol */
+.rounded-button:hover {
+    /* Vous pouvez ajouter une animation au survol si vous le souhaitez */
+}
+
+/* Animation lorsqu'on appuie sur le bouton */
+.rounded-button:active {
+    transform: translateY(2px); /* Déplacement vers le bas lorsqu'on appuie */
+}
+
+
+
+
+/* Styles de base de la section Réseaux sociaux et e-mail */
+#social {
+    background-color: rgb(15,15,15);
+    padding: 50px 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+}
+
+.container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #605f5f;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+}
+
+.social-links a {
+    font-size: 24px;
+    color: #605f5f;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #00a5da;
+}
+
+
+#bouton-container {
+    text-align: center;
+}
+
+#voir-plus {
+    background-color: #2196f3;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+#voir-plus:hover {
+    background-color: #2b5eff;
+}
+
+
+/*--------------------------------------------
+            VERSION MOBILE
+---------------------------------------------*/
+
+@media screen and (max-width: 1150px){
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+
+}
+
+
+body {
+  margin: 0;
+}
+
+
+.inner-grid {
+    max-width: 100%;
+}
+
+h1{
+    padding-top: 3%;
+    font-size: 18px;
+    padding-left: 1%;
+    padding-bottom: 1%;
+    padding-top: 7%;
+    font-family: poppins;
+}
+
+h4{
+    text-align: center;
+    padding-left: 1%;
+    padding-bottom: 3%;
+
+}
+
+img.animated-gif{
+  width: 100%;
+
+}
+
+    .slide iframe {
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+    }
+
+    .slider-container {
+        margin: 6% auto;
+
+    }
+
+h3 {
+    color: black;
+    padding-top: 7%;
+
+}
+
+
+
+
+.outer-grid {
+   display: flex;
+   flex-wrap: wrap;
+   padding: 0 4px;
+   padding-bottom: 10%;
+
+
+}
+
+
+    .prev {
+        left: 0;
+        background-color: black;
+    }
+    .next {
+        right: 0;
+        background-color: black;
+    }
+
+
+
+
+
