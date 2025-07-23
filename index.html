@@ -398,14 +398,20 @@ document.addEventListener('DOMContentLoaded', function() {
     const next = document.querySelector('.next');
 
     let currentIndex = 0;
-    const slideWidth = slides[0].clientWidth;
+
+    function getSlideWidth() {
+        return slides[0].clientWidth;
+    }
 
     function goToSlide(index) {
+        const slideWidth = getSlideWidth();
+
         if (index < 0) {
             index = slides.length - 1;
         } else if (index >= slides.length) {
             index = 0;
         }
+
         slider.style.transform = `translateX(${-index * slideWidth}px)`;
         currentIndex = index;
     }
@@ -416,6 +422,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     next.addEventListener('click', () => {
         goToSlide(currentIndex + 1);
+    });
+
+    // Recalculer le positionnement au redimensionnement
+    window.addEventListener('resize', () => {
+        goToSlide(currentIndex);
     });
 </script>
 
