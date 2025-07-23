@@ -425,11 +425,17 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Recalculer le positionnement au redimensionnement
-    window.addEventListener('resize', () => {
-        goToSlide(currentIndex);
-    });
-</script>
+   window.addEventListener('resize', () => {
+    slider.classList.add('no-transition'); // désactive la transition
+    goToSlide(currentIndex);
 
+    // attendre un tout petit peu avant de la réactiver
+    setTimeout(() => {
+        slider.classList.remove('no-transition');
+    }, 50); // 50 ms suffit, tu peux ajuster
+});
+
+</script>
 
 
 
