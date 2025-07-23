@@ -392,6 +392,28 @@ section.pourquoi{
         background-color: #00a5da;
     }
 
+        
+        .next:hover {
+        background-color: #0056b3;
+
+    }
+
+        
+        .next:active {
+      opacity: 0.6;
+    }
+
+       
+        .prev:hover {
+        background-color: #0056b3;
+
+    }
+
+        
+        .prev:active {
+      opacity: 0.6;
+    }
+
     .slide {
         position: relative;
         width: 100%;
@@ -627,8 +649,6 @@ h3 {
         right: 0;
         background-color: black;
     }
-
-
 
 
 
