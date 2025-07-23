@@ -363,7 +363,7 @@ section.pourquoi{
     transition: none !important;
     }
 
-    
+
     .slide {
         min-width: 100%;
         overflow: hidden;
@@ -460,15 +460,21 @@ height: 106%;
     font-family: 'Poppins', sans-serif; /* Police Poppins */
     font-weight: 700; /* Gras */
     transition: background-color 0.3s; /* Transition de couleur de fond */
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.1s ease;
+    user-select: none;
 }
 
 /* Animation au survol */
 .rounded-button:hover {
     /* Vous pouvez ajouter une animation au survol si vous le souhaitez */
+      background-color: #0056b3;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Animation lorsqu'on appuie sur le bouton */
 .rounded-button:active {
+    transform: scale(0.95);
     transform: translateY(2px); /* Déplacement vers le bas lorsqu'on appuie */
 }
 
@@ -529,9 +535,13 @@ height: 106%;
 }
 
 #voir-plus:hover {
-    background-color: #2b5eff;
+    background-color: #0056b3;
+
 }
 
+#voir-plus:active {
+  transform: scale(0.95);
+}
 
 /*--------------------------------------------
             VERSION MOBILE
